@@ -1,32 +1,31 @@
 # Site
-name: 'Mundana'
-description: 'A somewhat sensible place to store my side-projects and rambling thoughts.'
-logo: 'assets/images/logo.png'
-favicon: 'assets/images/favicon.ico'
-baseurl: '/'
-email: 'realjustinshaw@gmail.com'
+name: "Mundana"
+description: "A somewhat sensible place to store my side-projects and rambling thoughts."
+logo: "assets/images/logo.png"
+favicon: "assets/images/favicon.ico"
+baseurl: ""
+email: "realjustinshaw@gmail.com"
 
 include: ["_pages"]
 permalink: /:title/
 
 # Plugins
-plugins: 
+plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-seo-tag
-  
+
 authors:
-    justin:
-      name:           Justin Shaw
-      avatar:         /assets/images/avatar1.jpg
-      bio:            "Yo! Yo! My name is Justin -- thanks for viewing my website."
-      email:          realjustinshaw@gmail.com
-      twitter:        https://twitter.com/Justin_A_Shaw
- 
+  justin:
+    name: Justin Shaw
+    avatar: /assets/images/avatar1.jpg
+    bio: "Yo! Yo! My name is Justin -- thanks for viewing my website."
+    email: realjustinshaw@gmail.com
+    twitter: https://twitter.com/Justin_A_Shaw
+
 # Defaults
 defaults:
-
   # all posts
   - scope:
       path: "_posts"
@@ -34,13 +33,13 @@ defaults:
       layout: post
       author: justin
       avatar: /assets/images/avatar1.jpg
-      
+
   # all pages
   - scope:
       path: "_pages"
     values:
       layout: page
-      
+
 # Syntax
 markdown: kramdown
 highlighter: rouge
@@ -49,4 +48,12 @@ highlighter: rouge
 paginate: 10
 
 # Exclude metadata and development time dependencies (like Grunt plugins)
-exclude: [README.markdown, package.json, grunt.js, Gruntfile.js, Gruntfile.coffee, node_modules]
+exclude:
+  [
+    README.markdown,
+    package.json,
+    grunt.js,
+    Gruntfile.js,
+    Gruntfile.coffee,
+    node_modules,
+  ]
