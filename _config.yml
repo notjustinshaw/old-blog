@@ -1,9 +1,9 @@
 # Site
-name: "Blog"
+name: "JARVIS"
 description: "A somewhat sensible website where I write about my projects and ideas."
 logo: "assets/images/logo.png"
 favicon: "assets/images/favicon.ico"
-baseurl: ""
+baseurl: "/mundana-theme-jekyll"
 disqus: "demowebsite"
 email: "wowthemesnet@gmail.com"
 mailchimp-list: "https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b"
@@ -19,6 +19,13 @@ plugins:
   - jekyll-seo-tag
 
 authors:
+  justin:
+    name: Justin
+    site: https://google.com
+    avatar: /assets/images/avatar0.png
+    bio: "Hi, I am Sal, the author of Mundana, the theme you're currently previewing. I hope you like it!"
+    email: wowthemesnet@gmail.com
+    twitter: https://twitter.com/wowthemesnet
   sal:
     name: Sal
     site: https://www.wowthemes.net
