@@ -2,12 +2,17 @@
 layout: default
 ---
 {% assign author = site.authors[page.author] %}
-<div class="container">
-	<div class="jumbotron jumbotron-fluid mb-3 pl-0 pt-0 pb-0 bg-white position-relative">
-		<div class="h-100 tofront">
-			<div class="row {% if page.image %} justify-content-between {% else %} justify-content-center {% endif %}">
-				<div
-					class="{% if page.image %} col-md-6 {% else %} col-md-8 {% endif %} pr-0 pr-md-4 pt-4 pb-4 align-self-center">
+<!-- Share Button -->
+<div class="d-none">
+	{% include post/post-share.html %}
+</div>
+<div class="container-lg">
+
+	<div class="jumbotron jumbotron-fluid p-0 bg-white position-relative">
+		<div class="tofront">
+			<div class="row justify-content-center">
+				<!-- Title, tags, and author info -->
+				<div class="col-lg-8 col-md-12 pr-0 pr-md-4 pt-4 pb-4 align-self-center">
 					<p class="text-uppercase font-weight-bold">
 						<span class="catlist">
 							{% for category in page.categories %}
@@ -33,9 +38,11 @@ layout: default
 						</small>
 					</div>
 				</div>
+				<!-- image (maybe) -->
 				{% if page.image %}
-				<div class="col-md-6 pr-0 align-self-center">
-					<img class="rounded"
+				<div
+					class="{% if page.bigimage %} col-md-12 {% else %} col-md-8 {% endif %} pr-0 pl-0 align-self-center">
+					<img class="rounded col-md-12"
 						src="{% if page.image contains "
 						://"
 						%}{{
@@ -62,14 +69,8 @@ layout: default
 
 
 <div class="container-lg pt-4 pb-4">
-	<div class="row">
-
-		<!-- Share -->
-		<div class="col-lg-2 pr-4 mb-4 col-md-12">
-			{% include post/post-share.html %}
-		</div>
-
-		<div class="col-md-12 col-lg-8 mr-2">
+	<div class="row justify-content-center">
+		<div class="col-md-12 col-lg-8 align-self-center">
 			<!-- Article -->
 			<article class="article-post">
 				{{ content }}

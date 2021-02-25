@@ -6,7 +6,7 @@ favicon: "assets/images/favicon.ico"
 baseurl: "/mundana-theme-jekyll"
 disqus: "demowebsite"
 email: "realjustinshaw@gmail.com"
-mailchimp-list: "https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b"
+# mailchimp-list: "https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b"
 
 include: ["_pages"]
 permalink: /:title/
@@ -26,6 +26,7 @@ authors:
     bio: "Hey, my name is Justin! I am a undergraduate teaching assistant for intro CS at UW. Thanks for checking out my website!"
     email: realjustinshaw@gmail.com
     twitter: https://www.linkedin.com/in/justin--shaw/
+
   sal:
     name: Sal
     site: https://www.wowthemes.net
