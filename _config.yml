@@ -50,6 +50,8 @@ defaults:
     values:
       layout: post
       author: sal
+      comments: false
+      aletbar: false
       avatar: /assets/images/avatar1.jpg
 
   # all pages
