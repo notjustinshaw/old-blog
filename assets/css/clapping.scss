@@ -29,7 +29,7 @@ $default-clap-color: #03a87c;
         position: absolute;
         width: 60px;
         height: 60px;
-        border: 1px solid rgba(0,0,0,.15);
+        border: 1px solid rgba(0,0,0,.05);
         border-radius: 50%;
         z-index: 2;
         background: #fff;
@@ -46,14 +46,6 @@ $default-clap-color: #03a87c;
     }
     .clap-container.scale {
         animation: scaleAndBack 700ms forwards;
-    }
-    .clap-container > p {
-        font-size: xx-large;
-        margin: 0;
-        -webkit-user-select: none; /* Safari */        
-        -moz-user-select: none; /* Firefox */
-        -ms-user-select: none; /* IE10+/Edge */
-        user-select: none; /* Standard */
     }
     .click-counter {
         display: flex;

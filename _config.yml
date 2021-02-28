@@ -21,6 +21,7 @@ plugins:
 authors:
   justin:
     name: Justin
+    fullname: Justin Shaw
     site: https://google.com
     avatar: /assets/images/avatar0.png
     bio: "Hey, my name is Justin! I am a undergraduate teaching assistant for intro CS at UW. Thanks for checking out my website!"
@@ -29,6 +30,7 @@ authors:
 
   sal:
     name: Sal
+    fullname: Sal Khan
     site: https://www.wowthemes.net
     avatar: /assets/images/avatar1.jpg
     bio: "Hi, I am Sal, the author of Mundana, the theme you're currently previewing. I hope you like it!"
