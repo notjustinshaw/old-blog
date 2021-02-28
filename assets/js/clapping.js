@@ -32,7 +32,7 @@
         }, 2000);
     }
 
-    document.getElementById('clap').onclick = function () {
+    document.getElementById('clap').onclick = async function () {
         const clap = document.getElementById('clap');
         const clickCounter = document.getElementById("clicker");
         const particles = document.getElementById('particles');
@@ -40,7 +40,7 @@
         const particles3 = document.getElementById('particles-3');
         clap.classList.add('clicked');
         upClickCounter();
-
+        console.log(await getClapCount());
         runAnimationCycle(clap, 'scale');
 
         if (!particles.classList.contains('animating')) {
@@ -109,21 +109,11 @@
         particles.style.transform = `rotate(${randomRotationAngle})`;
     }
 
-    // async function getClapCount() {
-    //     try {
-    //         const xmlHttp = new XMLHttpRequest();
-    //         xmlHttp.withCredentials = true;
-    //         await xmlHttp.open('GET', 'https://hitcounter.pythonanywhere.com/count', true);
-    //         await xmlHttp.send(null);
-    //         return xmlHttp.responseText;
-    //     } catch (error) {
-    //         console.log(error);
-    //     }
-    // }
-
-    // const getClapCount = () => {
-    //     const thread = new XMLHttpRequest();
-    //     thread.withCredentials = true;
-    //     return xmlHttp.open('GET', 'https://hitcounter.pythonanywhere.com/count', true);
-    // }
+    async function getClapCount() {
+        const xmlHttp = new XMLHttpRequest();
+        xmlHttp.withCredentials = true;
+        await xmlHttp.open('GET', 'https://hitcounter.pythonanywhere.com/count', true);
+        await xmlHttp.send(null);
+        return xmlHttp.responseText;
+    }
 })();
