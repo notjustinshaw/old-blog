@@ -112,8 +112,8 @@
     async function getClapCount() {
         const xmlHttp = new XMLHttpRequest();
         xmlHttp.withCredentials = true;
-        return Promise(() => xmlHttp.open('GET', hitCounterURL, true))
-            .then(() => xmlHttp.send(null))
-            .then(() => xmlHttp.responseText);
+        xmlHttp.open('GET', hitCounterURL, true);
+        xmlHttp.send(null);
+        return xmlHttp.responseText;
     }
 })();
