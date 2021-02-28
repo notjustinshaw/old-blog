@@ -42,6 +42,9 @@ a.text-dark:hover {
 .z-index-1 {
 	z-index:1;
 }
+.text-small {
+	font-size: 14px;
+}
 @media (max-width:991.98px) {
 	.display-3 {
 		font-size:3.5rem;
@@ -63,6 +66,17 @@ a.text-dark:hover {
 	margin-left:-5rem;
 }
 @media (min-width:768px) {
+	.content-width {
+		width: 680px;
+		max-width: 680px;
+	}
+	.floating-bio {
+		position: relative;
+		left: -80px;
+		width: 1300px;
+		max-width: 130px;
+		margin-left: -130px;
+	}
 	.h-md-100-v {
 		height:100vh;
 	}

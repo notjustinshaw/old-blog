@@ -2,12 +2,12 @@
 layout: default
 ---
 {% assign author = site.authors[page.author] %}
-<div class="container-lg-fluid">
-	<div class="jumbotron jumbotron-fluid p-0 bg-white position-relative">
+<div class="container-fluid">
+	<div class="jumbotron jumbotron-fluid p-md-0 py-0 bg-white position-relative">
 		<div class="tofront">
 			<div class="row justify-content-center">
 				<!-- Title, tags, and author info -->
-				<div class="col-lg-6 col-md-12 pr-0 pr-md-4 pt-4 pb-4 align-self-center">
+				<div class="px-0 pr-md-4 py-4 align-self-center content-width">
 					<p class="text-uppercase font-weight-bold">
 						<span class="catlist">
 							{% for category in page.categories %}
@@ -37,8 +37,8 @@ layout: default
 				{% if page.image %}
 				<div class="{% unless page.bigimage %} w-100 {% endunless %}"></div>
 				<div
-					class="{% if page.bigimage %} col-md-12 {% else %} col-lg-6 {% endif %} pr-0 pl-0 align-self-center">
-					<img class="rounded col-md-12"
+					class="{% if page.bigimage %} col-md-12 {% else %} content-width {% endif %} px-0 align-self-center">
+					<img class="rounded col-md-12 px-0"
 						src="{% if page.image contains "
 						://"
 						%}{{
@@ -58,16 +58,13 @@ layout: default
 			</div>
 		</div>
 	</div>
-</div>
-
-<div class="container-lg-fluid">
-	<div class="row">
+	<div class="row justify-content-center px-4">
 		<!-- Share Menu -->
-		<div class="col-lg-2 col-md-0 offset-lg-1 px-5">
+		<div class="sticky-top floating-bio float-left d-none d-xl-block">
 			{% include post/post-share.html %}
 		</div>
 
-		<div class="col-md-6 col-lg-6">
+		<div class="content-width align-content-center">
 			<!-- Article -->
 			<article class="article-post">
 				{{ content }}
