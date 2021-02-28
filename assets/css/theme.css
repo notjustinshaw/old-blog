@@ -65,11 +65,11 @@ a.text-dark:hover {
 .ml-neg5 {
 	margin-left:-5rem;
 }
+.content-width {
+	width: 680px;
+	max-width: 680px;
+}
 @media (min-width:768px) {
-	.content-width {
-		width: 680px;
-		max-width: 680px;
-	}
 	.floating-bio {
 		position: relative;
 		left: -80px;
