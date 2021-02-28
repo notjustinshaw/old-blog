@@ -2,6 +2,7 @@
 (function () {
     let accCounter = 0;
     let totalCount = 127;
+    const hitCounterURL = 'https://hitcounter.pythonanywhere.com/count';
     const minDeg = 1;
     const maxDeg = 72;
     const particlesClasses = [
@@ -34,7 +35,6 @@
 
     document.getElementById('clap').onclick = async function () {
         const clap = document.getElementById('clap');
-        const clickCounter = document.getElementById("clicker");
         const particles = document.getElementById('particles');
         const particles2 = document.getElementById('particles-2');
         const particles3 = document.getElementById('particles-3');
@@ -103,17 +103,17 @@
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
-    function addRandomParticlesRotation(particlesName, minDeg, maxDeg) {
+    function addRandomParticlesRotation(particlesName, minDegrees, maxDegrees) {
         const particles = document.getElementById(particlesName);
-        const randomRotationAngle = getRandomInt(minDeg, maxDeg) + 'deg';
+        const randomRotationAngle = getRandomInt(minDegrees, maxDegrees) + 'deg';
         particles.style.transform = `rotate(${randomRotationAngle})`;
     }
 
     async function getClapCount() {
         const xmlHttp = new XMLHttpRequest();
         xmlHttp.withCredentials = true;
-        await xmlHttp.open('GET', 'https://hitcounter.pythonanywhere.com/count', true);
-        await xmlHttp.send(null);
-        return xmlHttp.responseText;
+        return Promise(() => xmlHttp.open('GET', hitCounterURL, true))
+            .then(() => xmlHttp.send(null))
+            .then(() => xmlHttp.responseText);
     }
 })();
