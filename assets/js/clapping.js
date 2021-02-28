@@ -40,7 +40,7 @@
         const particles3 = document.getElementById('particles-3');
         clap.classList.add('clicked');
         upClickCounter();
-        console.log(await getClapCount());
+        getClapCount().then((count) => console.log("Count is " + count));
         runAnimationCycle(clap, 'scale');
 
         if (!particles.classList.contains('animating')) {
