@@ -132,7 +132,7 @@
         }
     }
 
-    function makeDelayedCallsToAPI() {
+    async function makeDelayedCallsToAPI() {
         if (totalCount + accCounter > countFromAPI) {
             countFromAPI = parseInt(await getClapCount());
             setTimeout(makeDelayedCallsToAPI, 0);
