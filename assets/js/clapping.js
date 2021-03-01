@@ -4,7 +4,7 @@
     let countFromAPI = 0;
     let accCounter = 0;
     let totalCount = 0;
-    const hitCounterURL = 'https://hitcounter.pythonanywhere.com/';
+    const hitCounterURL = 'https://hitcounter.pythonanywhere.com';
     const minDeg = 1;
     const maxDeg = 72;
     const animationDuration = 700;
@@ -129,6 +129,7 @@
             return xmlHttp.responseText;
         } catch (error) {
             console.log(error);
+            return 123;
         }
     }
 
