@@ -4,6 +4,7 @@
  * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+
 :root {
   --blue: #7832e2;
   --indigo: #502c6c;
@@ -27,13 +28,8 @@
   --danger: #ea2f65;
   --light: #f8f9fa;
   --dark: #212529;
-  --white: #fff;
-  --purple: #ad6edd;
   --salmon: #ff977a;
-  --cyan: #35bdff;
   --gray: #ced4da;
-  --indigo: #502c6c;
-  --orange: #fbb500;
   --lightblue: #e8f3ec;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
@@ -41,7 +37,29 @@
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
   --font-family-sans-serif: "Segoe UI", "Helvetica Neue", "Arial";
-  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --background-color: #ffffff;
+  --main-text-color: #212529;
+  --border-color: #e8f3ec;
+  --follow-bg-color: #ffffff;
+	--brand-color: rgb(0, 0, 0, 0.9);
+	--brand-color-hover: rgb(0, 0, 0, 0.7);
+	--nav-item-color: rgb(0, 0, 0, 0.7);
+	--nav-item-color-hover: rgb(0, 0, 0, 0.5);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #0E1116;
+    --main-text-color: #b0b8c0;
+    --border-color: #22262C;
+    --follow-bg-color: #151f1c;
+    --brand-color: rgb(255, 255, 255, 0.9);
+		--brand-color-hover: rgb(255, 255, 255, 0.7);
+		--nav-item-color: rgb(255, 255, 255, 0.7);
+		--nav-item-color-hover: rgb(255, 255, 255, 0.5);
+  }
+}
 
 *,
 *::before,
@@ -68,9 +86,9 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.6;
-  color: #212529;
+  color: var(--main-text-color);
   text-align: left;
-  background-color: #fff; }
+  background-color: var(--background-color); }
 
 [tabindex="-1"]:focus {
   outline: 0 !important; }
@@ -314,7 +332,7 @@ h1, h2, h3, h4, h5, h6,
   font-family: inherit;
   font-weight: 500;
   line-height: 1.2;
-  color: inherit; }
+  color: var(--brand-color); }
 
 h1, .h1 {
   font-size: 2.5rem; }
@@ -1356,7 +1374,7 @@ pre {
   font-size: 1rem;
   line-height: 1.6;
   color: #495057;
-  background-color: #fff;
+  background-color: var(--background-color);
   background-clip: padding-box;
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
@@ -1369,7 +1387,7 @@ pre {
     border: 0; }
   .form-control:focus {
     color: #495057;
-    background-color: #fff;
+    background-color: var(--background-color);
     border-color: #2ffbc5;
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(3, 168, 124, 0.25); }
@@ -2151,7 +2169,7 @@ fieldset:disabled a.btn {
 
 .btn-outline-success {
   color: #03a87c;
-  background-color: transparent;
+  background-color: var(--follow-bg-color);
   background-image: none;
   border-color: #03a87c; }
   .btn-outline-success:hover {
@@ -3550,7 +3568,7 @@ input[type="button"].btn-block {
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #fff;
+  background-color: var(--background-color);
   background-clip: border-box;
   border: 1px solid #e8f3ec;
   border-radius: 0.25rem; }
@@ -5145,7 +5163,7 @@ button.bg-lightblue:focus {
   background-color: #c6e2d0 !important; }
 
 .bg-white {
-  background-color: #fff !important; }
+  background-color: var(--background-color) !important; }
 
 .bg-transparent {
   background-color: transparent !important; }
@@ -5154,7 +5172,7 @@ button.bg-lightblue:focus {
   border: 1px solid #e8f3ec !important; }
 
 .border-top {
-  border-top: 1px solid #e8f3ec !important; }
+  border-top: 1px solid var(--border-color) !important; }
 
 .border-right {
   border-right: 1px solid #e8f3ec !important; }
@@ -7191,10 +7209,10 @@ a.text-warning:hover, a.text-warning:focus {
   color: #cfb400 !important; }
 
 .text-danger {
-  color: #ea2f65 !important; }
+  color: #ed6a65 !important; }
 
 a.text-danger:hover, a.text-danger:focus {
-  color: #d1154b !important; }
+  color: #ed6a65 !important; }
 
 .text-light {
   color: #f8f9fa !important; }
@@ -7203,7 +7221,7 @@ a.text-light:hover, a.text-light:focus {
   color: #dae0e5 !important; }
 
 .text-dark {
-  color: #212529 !important; }
+  color: var(--nav-item-color) !important; }
 
 a.text-dark:hover, a.text-dark:focus {
   color: #0a0c0d !important; }

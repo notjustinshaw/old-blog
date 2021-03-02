@@ -4,7 +4,7 @@ title:  "Dome Sweet Dome"
 author: justin
 categories: [ Short Story ]
 image: assets/images/dome-sweet-dome.jpg
-bigimage: true
+bigimage: false
 ---
 A day of overcast Washington skies had given way to a dark night of scattered showers, a warning sign of the storm that was fast approaching. But the thought of taking refuge inside the house had not crossed my mind. Despite my lanky 6’ 2” stature, I couldn’t reach the top of the structure without leaning outward as I balanced on one foot on the very top step of a teetering metal ladder.
 
